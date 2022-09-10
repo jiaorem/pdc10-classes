@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>310</x><y>39</y><w>320</w><h>190</h></coordinates><panel_attributes>Class
+--
+#id:int
+#name: varchar
+#description: text
+#code: varchar
+--
++addClass(name, description, classCode)
++updateInformation(id, name, description, classCode)
++removeClass(id, name, description, classCode)
++assignTeacher(Teacher)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>39</y><w>210</w><h>190</h></coordinates><panel_attributes>Teachers
+--
+#id:int
+#name: varchar
+--
++addTeacher(name)
++updateTeacher(id, name)
++removeTeacher(id, name)
++viewClasses(classCode, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>39</y><w>210</w><h>190</h></coordinates><panel_attributes>Student
+--
+#id:int
+#student_name: varchar
+--
++addStudent (name)
++updateStudent (id, name)
++removeStudent (id, name)
++viewStudents (id, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>289</y><w>260</w><h>190</h></coordinates><panel_attributes>Class Roster
+--
+#id:int
+#name: varchar
+--
++openRoster (id, name, code)
++addStudent (id, name)
++removeStudent (id, name)
++exportClass (id, name)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>219</y><w>230</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>210;10;210;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>119</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>219</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element></diagram>
