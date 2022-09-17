@@ -1,0 +1,14 @@
+{
+    "name": "user/pdc10-classes",
+    "autoload": {
+        "psr-4":{"Models\\": "models/"
+    }
+    },
+    "authors": [
+        {
+            "name": "MicohYabut",
+            "email": "yabut.micohjomarie@auf.edu.ph"
+        }
+    ],
+    "require": {}
+}
