@@ -1,7 +1,7 @@
 {
     "name": "user/pdc10-classes",
     "autoload": {
-        "psr-4":{"Models\\": "models/"
+        "psr-4":{"Models\\": "Models/"
     }
     },
     "authors": [

@@ -1,9 +1,11 @@
 <?php 
 
-namespace models;
-use \PDO;
+namespace Models;
+use PDO;
+use Exception;
 
-class Classes {
+class Classes 
+{
     protected $id;
 	protected $name;
 	protected $description;
@@ -27,11 +29,11 @@ class Classes {
     }
 
     public function getName() {
-        return $this->Name;
+        return $this->name;
     }
 
     public function getDescription() {
-        return $this->Description;
+        return $this->description;
     }
 
     public function getClassCode() {
@@ -41,6 +43,28 @@ class Classes {
     public function getTeacherId() {
         return $this->teacher_id;
     }
+
+	public function setConnection($connection)
+	{
+		$this->connection = $connection;
+	}
+
+	public static function displayClasses(){
+		$dsn = "mysql:host=localhost;dbname=pdc10_classes";
+		$user = "root";
+		$passwd = "";
+		$pdo = new PDO($dsn, $user, $passwd);
+		try {
+			$sql = "SELECT * FROM classes";
+			$statement = $pdo->prepare($sql);
+			$statement->execute();
+			$retrieveClasses = $statement->fetchAll();
+			return $retrieveClasses;
+
+		} catch (Exception $e) {
+			error_log($e->getMessage());
+		}
+	}
 
     public function addToClass(){
         global $pdo;
