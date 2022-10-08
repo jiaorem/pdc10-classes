@@ -17,6 +17,8 @@ $pdo = new PDO($dsn, $user, $passwd);
         header('Location: index.php');
     }
     catch (Exception $e) {
+        $msg = 'failed to add a new class';
+        echo $msg;
         error_log($e->getMessage());
     }
 ?>
